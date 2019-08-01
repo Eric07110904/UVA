@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<windows.h>
 using namespace std;
 int number(int *array,int count){
     int sum=0;int n=1;

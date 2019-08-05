@@ -115,9 +115,9 @@ int main(){
 
         for(int i=0;i<4;i++){
             sort(user[i].begin(),user[i].end(),cmp);
-            cout<<COLOR[i]<<": ";
+            cout<<COLOR[i]<<":";
             for(int j=0;j<user[i].size();j++){
-                cout<<user[i][j].color<<user[i][j].point<<" ";
+                cout<<" "<<user[i][j].color<<user[i][j].point;
             }
             cout<<endl;
         }

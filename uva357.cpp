@@ -1,30 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
+typedef long long int ll;
 int main(){
-
-
-    int n;
-    long long int dp[30002]={1};
-    long long int cost[5]={1,5,10,25,50};
+    ll coin[5]={1,5,10,25,50};
+    ll n;
+    ll* dp=new ll [30001]{};
+    dp[0]=1;
     for(int i=0;i<5;i++){
-        for(int j=cost[i];j<30002;j++){
-            dp[j]=dp[j]+dp[j-cost[i]];
+        for(int j=coin[i];j<=30001;j++){
+            dp[j]=dp[j]+dp[j-coin[i]];
         }
     }
     while(cin>>n){
-        cout<<dp[n]<<endl;
+        if(dp[n]==1){
+            printf("There is only 1 way to produce %lld cents change.\n",n);
+        }
+        else{
+            printf("There are %lld ways to produce %lld cents change.\n",dp[n],n);
+        }
+
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
